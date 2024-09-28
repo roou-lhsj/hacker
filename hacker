@@ -1,6 +1,5 @@
 #!/bin/bash
 cd .hacker
-# 读取用户的输入
 echo "/---------------------------------------------------\ "
 echo "|   作者          :root                             |"
 echo "|   作者QQ        :2920293003                       |"
@@ -13,8 +12,6 @@ echo "mip22就是搭建一个伪网站"
 echo "root就是获取root权限(虚拟的)"
 echo " --------------------[密封线]-------------------- "
 read -p "请输入命令" input
-
-# 判断输入的值
 case $input in
   ddos)
     echo "已开始"
@@ -24,7 +21,7 @@ case $input in
   mip22)
     echo "已开始"
     cd mip22
-    chmod 777 mip22
+    chmod 777 mip22.sh
     ./mip22.sh
     ;;
   root)
