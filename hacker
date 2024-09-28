@@ -1,0 +1,39 @@
+#!/bin/bash
+cd .hacker
+# 读取用户的输入
+echo "/---------------------------------------------------\ "
+echo "|   作者          :root                             |"
+echo "|   作者QQ        :2920293003                       |"
+echo "|   版本          :V1.0.0                           |"
+echo "\---------------------------------------------------/"
+echo " "
+echo "ssh就是爆破密码"
+echo "ddos就是攻击网站"
+echo "mip22就是搭建一个伪网站"
+echo "root就是获取root权限(虚拟的)"
+echo " --------------------[密封线]-------------------- "
+read -p "请输入命令" input
+
+# 判断输入的值
+case $input in
+  ddos)
+    echo "已开始"
+    cd ddos
+    python3 ddos-p3.py
+    ;;
+  mip22)
+    echo "已开始"
+    cd mip22
+    chmod 777 mip22
+    ./mip22.sh
+    ;;
+  root)
+    echo "已开始"
+    cd FakeRoot
+    python2 root.py
+    ;;
+  *)
+    echo "没有此命令"
+    ;;
+esac
+cd ~
